@@ -12,21 +12,24 @@
         padding: 0 auto;
     }
 
-    
+    body{
+        display: flex;
+        justify-content: center;
+    }
     
     
 </style>
 </head>
 <body>
-    <form class="">
+    <form action='/users/added' method='POST'>
             <h1 class="display-4 text-center" >Add New User</h1>
             <div class="form-group">
                 <label for="first-name">First Name:</label>
-                <input type="text" name="first-name" class="form-control">
+                <input type="text" name="first_name" class="form-control">
             </div>
             <div class="form-group">
                 <label for="last-name">Last Name:</label>
-                <input type="text" name="last-name" class="form-control">
+                <input type="text" name="last_name" class="form-control">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>

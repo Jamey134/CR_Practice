@@ -2,7 +2,7 @@
 from mysqlconnection import connectToMySQL
 # model the class after the friend table from our database
 class Users:
-    DB = "users_schema" # <--- double-check
+    DB = "users_schema.users" # <--- double-check
     def __init__( self , data ):
         self.id = data['id']
         self.first_name = data['first_name']
@@ -15,8 +15,8 @@ class Users:
     def get_all(cls):
         query = """
         
-        INSERT INTO users_schema.users (first_name, last_name, email);
-        VALUES (%(first_name)s,%(last_name)s,%(email)s)
+        INSERT INTO users_schema.users (first_name, last_name, email)
+        VALUES (%(first_name)s,%(last_name)s,%(email)s);
         
         """
         # make sure to call the connectToMySQL function with the schema you are targeting.
