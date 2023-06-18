@@ -36,25 +36,19 @@
         <tbody>
             {% for user in users %}
             <tr>
-                <td name='id'>{{session['userID']}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.created_at}}</td>
+                <!-- <td name='id'>{{session['userID']}}</td>
                 <td name='first_name'>{{session['userFirstName']}}</td>
                 <td name='last_name'>{{session['userLastName']}}</td>
-                <td name='email'>{{session['userEmail']}}</td>
-                <a href="/" class="btn btn-warning">Go Back</a>
+                <td name='email'>{{session['userEmail']}}</td> -->
             </tr>
             {%endfor%}
         </tbody>
     </table>
-
-
-
-
-    </div>
-    <div class="results">
-
-    </div>
-    </div>
-
+    <a href="/" class="btn btn-warning">Go Back</a>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
